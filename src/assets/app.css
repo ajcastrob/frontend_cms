@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: false; /* solo nuestro tema custom se compila */
+  themes: false;
 }
 
 @plugin "daisyui/theme" {
@@ -9,26 +9,62 @@
   default: true;
   color-scheme: light;
 
-  --color-base-100: oklch(98.5% 0.009 55);
-  --color-base-200: oklch(96.3% 0.012 55);
-  --color-base-300: oklch(92% 0.014 55);
-  --color-base-content: oklch(23.5% 0.018 55);
-  --color-primary: oklch(50% 0.13 52);
-  --color-primary-content: oklch(98.5% 0.008 55);
-  --color-secondary: oklch(23.5% 0.018 55);
-  --color-secondary-content: oklch(98.5% 0.008 55);
-  --color-accent: oklch(50% 0.13 52);
-  --color-accent-content: oklch(98.5% 0.008 55);
-  --color-neutral: oklch(23.5% 0.018 55);
-  --color-neutral-content: oklch(98.5% 0.008 55);
+  --color-base-100: oklch(97.6% 0.006 255);
+  --color-base-200: oklch(94.8% 0.008 255);
+  --color-base-300: oklch(89.5% 0.01 255);
+  --color-base-content: oklch(24% 0.02 255);
+  --color-primary: oklch(51% 0.13 38);
+  --color-primary-content: oklch(98% 0.01 38);
+  --color-secondary: oklch(24% 0.02 255);
+  --color-secondary-content: oklch(97.6% 0.006 255);
+  --color-accent: oklch(51% 0.13 38);
+  --color-accent-content: oklch(98% 0.01 38);
+  --color-neutral: oklch(24% 0.02 255);
+  --color-neutral-content: oklch(97.6% 0.006 255);
   --color-info: oklch(60% 0.08 240);
-  --color-info-content: oklch(98.5% 0.005 240);
+  --color-info-content: oklch(98% 0.005 240);
   --color-success: oklch(58% 0.12 150);
-  --color-success-content: oklch(98.5% 0.005 150);
+  --color-success-content: oklch(98% 0.005 150);
   --color-warning: oklch(75% 0.12 80);
-  --color-warning-content: oklch(23.5% 0.018 80);
+  --color-warning-content: oklch(24% 0.02 80);
   --color-error: oklch(55% 0.15 25);
-  --color-error-content: oklch(98.5% 0.005 25);
+  --color-error-content: oklch(98% 0.005 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "skills-dark";
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: oklch(22% 0.014 255);
+  --color-base-200: oklch(18% 0.012 255);
+  --color-base-300: oklch(30% 0.016 255);
+  --color-base-content: oklch(93% 0.01 255);
+  --color-primary: oklch(72% 0.11 38);
+  --color-primary-content: oklch(22% 0.03 38);
+  --color-secondary: oklch(93% 0.01 255);
+  --color-secondary-content: oklch(22% 0.014 255);
+  --color-accent: oklch(72% 0.11 38);
+  --color-accent-content: oklch(22% 0.03 38);
+  --color-neutral: oklch(93% 0.01 255);
+  --color-neutral-content: oklch(22% 0.014 255);
+  --color-info: oklch(70% 0.08 240);
+  --color-info-content: oklch(22% 0.02 240);
+  --color-success: oklch(68% 0.12 150);
+  --color-success-content: oklch(22% 0.02 150);
+  --color-warning: oklch(80% 0.12 80);
+  --color-warning-content: oklch(24% 0.03 80);
+  --color-error: oklch(68% 0.14 25);
+  --color-error-content: oklch(98% 0.005 25);
 
   --radius-selector: 0.5rem;
   --radius-field: 0.5rem;
@@ -44,7 +80,81 @@
   --font-sans:
     "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Kalam", "Comic Sans MS", "Segoe Script", cursive;
-  --color-muted-ink: oklch(42% 0.022 55);
+}
+
+.article-body {
+  @apply max-w-[65ch] text-base leading-[1.7] text-base-content;
+}
+
+.article-body > :first-child {
+  @apply mt-0;
+}
+
+.article-body p {
+  @apply mt-5;
+}
+
+.article-body a {
+  @apply link link-hover;
+}
+
+.article-body h2 {
+  @apply mt-10 font-sans text-2xl font-semibold tracking-tight text-balance;
+}
+
+.article-body h3 {
+  @apply mt-8 font-sans text-lg font-semibold tracking-tight text-balance;
+}
+
+.article-body h2 + p,
+.article-body h3 + p {
+  @apply mt-3;
+}
+
+.article-body ul {
+  @apply mt-4 ml-5 list-disc;
+}
+
+.article-body ol {
+  @apply mt-4 ml-5 list-decimal;
+}
+
+.article-body li + li {
+  @apply mt-1.5;
+}
+
+.article-body blockquote {
+  @apply mt-4 border-l-2 border-base-300 pl-4 text-base-content/70;
+}
+
+.article-body img {
+  @apply mt-6 rounded-box;
+}
+
+.article-body code {
+  @apply rounded-field bg-base-200 px-1 py-0.5 text-[0.9em];
+}
+
+.article-body pre {
+  @apply mt-4 overflow-x-auto rounded-box bg-base-200 p-4;
+}
+
+.article-body pre code {
+  @apply bg-transparent p-0;
+}
+
+.article-body hr {
+  @apply my-10 border-base-300;
+}
+
+.article-body b,
+.article-body strong {
+  @apply font-semibold;
+}
+
+.article-body i,
+.article-body em {
+  @apply italic;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+
+const {
+  src,
+  alt = "",
+  class: className = "",
+  loading = "lazy",
+  sizes = "100vw",
+} = Astro.props;
+---
+
+{
+  src && (
+    <Image
+      src={src}
+      alt={alt}
+      inferSize
+      widths={[320, 640, 960, 1280]}
+      sizes={sizes}
+      class={className}
+      loading={loading}
+      onerror="this.remove()"
+    />
+  )
+}

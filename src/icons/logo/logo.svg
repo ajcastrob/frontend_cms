@@ -1,19 +1,7 @@
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img">
-
-  <defs>
-    <clipPath id="blobClip">
-      <circle cx="100" cy="100" r="76"/>
-    </clipPath>
-  </defs>
-
-  <!-- mancha minima -->
-  <circle cx="100" cy="100" r="76" fill="#111111"/>
-
-  <!-- shuriken en negativo, inclinado -->
-  <g clip-path="url(#blobClip)" fill="#f4f1ea">
-    <g transform="translate(100,100) rotate(22) scale(0.9)">
-      <path d="M0 -46 L12 -12 L46 0 L12 12 L0 46 L-12 12 L-46 0 L-12 -12 Z"/>
-      <circle cx="0" cy="0" r="7" fill="#111111"/>
-    </g>
-  </g>
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="M100 24a76 76 0 1 1 0 152 76 76 0 1 1 0-152zM115.51 61.61 114.06 94.03 138.39 115.51 105.97 114.06 84.49 138.39 85.94 105.97 61.61 84.49 94.03 85.94zM100 93.7a6.3 6.3 0 1 1 0 12.6 6.3 6.3 0 1 1 0-12.6z"
+  />
 </svg>
