@@ -1,18 +1,30 @@
 ---
-
+const path = Astro.url.pathname;
 ---
 
-<header class="navbar bg-base-100 shadow-sm">
-			<div class="max-w-5xl mx-auto w-full">
-				<div class="navbar-start">
-					<a href="/" class="btn btn-ghost text-xl">Skills</a>
-				</div>
-				<nav class="navbar-end">
-					<ul class="menu menu-horizontal px-1">
-						<li><a href="/">Home</a></li>
-						<li><a href="/skills/">Skills</a></li>
-					</ul>
-				</nav>
-			</div>
+<header class="navbar sticky top-0 z-40 border-b border-base-300 bg-base-200">
+  <div class="mx-auto w-full max-w-5xl px-4 sm:px-6">
+    <div class="navbar-start">
+      <a href="/" class="inline-flex items-center gap-2 py-2 pr-4" aria-label="Skills, portada">
+        <svg class="h-4 w-6" aria-hidden="true"><use href="/assets/icons/logo.svg#logo" /></svg>
+        <span class="font-display text-2xl font-bold leading-none text-base-content">Ashi Labs</span>
+      </a>
+    </div>
+    <nav class="navbar-end" aria-label="Navegación principal">
+      <ul class="menu menu-horizontal gap-1 px-0">
+        <li>
+          <a href="/" aria-current={path === "/" ? "page" : undefined}
+             class="text-base font-medium text-base-content transition-colors duration-150 ease-out hover:text-base-content aria-[current=page]:text-primary aria-[current=page]:underline aria-[current=page]:underline-offset-8 aria-[current=page]:decoration-primary/40">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/skills/" aria-current={path.startsWith("/skills") ? "page" : undefined}
+             class="text-base font-medium text-base-content transition-colors duration-150 ease-out hover:text-base-content aria-[current=page]:text-primary aria-[current=page]:underline aria-[current=page]:underline-offset-8 aria-[current=page]:decoration-primary/40">
+            Skills
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
-
