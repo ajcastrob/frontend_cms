@@ -1,0 +1,100 @@
+{
+  "meta": {
+    "total_count": 3
+  },
+  "items": [
+    {
+      "id": 4,
+      "meta": {
+        "type": "skills_blog.ArticlePage",
+        "detail_url": "http://localhost/api/v2/pages/4/",
+        "html_url": "http://localhost/blog/t%C3%ADtulo-de-prueba/",
+        "slug": "título-de-prueba",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "",
+        "first_published_at": "2026-08-18T21:27:11.595000-05:00",
+        "alias_of": null,
+        "locale": "es"
+      },
+      "title": "Artículo 1",
+      "intro": "Intro de artículo 1",
+      "body": "<p data-block-key=\"zsj6q\">Esto es el body del artículo 1</p>",
+      "date": "2026-08-18",
+      "image": {
+        "id": 1,
+        "meta": {
+          "type": "wagtailimages.Image",
+          "detail_url": "http://localhost/api/v2/images/1/",
+          "download_url": "/media/original_images/maxresdefault.jpg"
+        },
+        "title": "wagtail"
+      },
+      "caption": "Wagtail CMS",
+      "tags": ["articulo", "test"],
+      "repo_url": ""
+    },
+    {
+      "id": 5,
+      "meta": {
+        "type": "skills_blog.ArticlePage",
+        "detail_url": "http://localhost/api/v2/pages/5/",
+        "html_url": "http://localhost/blog/art%C3%ADculo-2/",
+        "slug": "artículo-2",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "",
+        "first_published_at": "2026-08-19T22:42:29.426373-05:00",
+        "alias_of": null,
+        "locale": "es"
+      },
+      "title": "Artículo 2",
+      "intro": "Intro del artículo 2",
+      "body": "<p data-block-key=\"fpbnk\">Esto es el body del artículo 2</p>",
+      "date": "2026-08-19",
+      "image": {
+        "id": 2,
+        "meta": {
+          "type": "wagtailimages.Image",
+          "detail_url": "http://localhost/api/v2/images/2/",
+          "download_url": "/media/original_images/wagtail.png"
+        },
+        "title": "wagtail-django"
+      },
+      "caption": "wagtial-django",
+      "tags": ["articulo", "blog"],
+      "repo_url": ""
+    },
+    {
+      "id": 6,
+      "meta": {
+        "type": "skills_blog.ArticlePage",
+        "detail_url": "http://localhost/api/v2/pages/6/",
+        "html_url": "http://localhost/blog/art%C3%ADculo-3/",
+        "slug": "artículo-3",
+        "show_in_menus": false,
+        "seo_title": "",
+        "search_description": "",
+        "first_published_at": "2026-08-19T22:44:23.962205-05:00",
+        "alias_of": null,
+        "locale": "es"
+      },
+      "title": "Artículo 3",
+      "intro": "Intro del artículo 3",
+      "body": "<p data-block-key=\"2yrhu\">Esto es el body del artículo 3</p>",
+      "date": "2026-08-19",
+      "image": {
+        "id": 3,
+        "meta": {
+          "type": "wagtailimages.Image",
+          "detail_url": "http://localhost/api/v2/images/3/",
+          "download_url": "/media/original_images/WagtailVsWordpress.format-png.width-600.png"
+        },
+        "title": "WagtailVsWordpress"
+      },
+      "caption": "Wordpress-Wagtail",
+      "tags": ["articulo", "wagtail", "wordpress"],
+      "repo_url": ""
+    }
+  ]
+}

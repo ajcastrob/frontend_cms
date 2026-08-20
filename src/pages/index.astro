@@ -1,8 +1,10 @@
 ---
-import {getBlogPost} from "@/lib/wagtail.js"
+// import {getBlogPost} from "@/lib/wagtail.js"
+//
+// const posts = await getBlogPost();
+import data from "@/data/posts.json"
 
-const posts = await getBlogPost();
-console.log(posts[0])
+const posts = data.items
 ---
 
 <html lang="es">
