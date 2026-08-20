@@ -1,2 +1,56 @@
 @import "tailwindcss";
-@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: false; /* solo nuestro tema custom se compila */
+}
+
+@plugin "daisyui/theme" {
+  name: "skills";
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: oklch(98.5% 0.009 55);
+  --color-base-200: oklch(96.3% 0.012 55);
+  --color-base-300: oklch(92% 0.014 55);
+  --color-base-content: oklch(23.5% 0.018 55);
+  --color-primary: oklch(50% 0.13 52);
+  --color-primary-content: oklch(98.5% 0.008 55);
+  --color-secondary: oklch(23.5% 0.018 55);
+  --color-secondary-content: oklch(98.5% 0.008 55);
+  --color-accent: oklch(50% 0.13 52);
+  --color-accent-content: oklch(98.5% 0.008 55);
+  --color-neutral: oklch(23.5% 0.018 55);
+  --color-neutral-content: oklch(98.5% 0.008 55);
+  --color-info: oklch(60% 0.08 240);
+  --color-info-content: oklch(98.5% 0.005 240);
+  --color-success: oklch(58% 0.12 150);
+  --color-success-content: oklch(98.5% 0.005 150);
+  --color-warning: oklch(75% 0.12 80);
+  --color-warning-content: oklch(23.5% 0.018 80);
+  --color-error: oklch(55% 0.15 25);
+  --color-error-content: oklch(98.5% 0.005 25);
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@theme {
+  --font-sans:
+    "Figtree Variable", "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Kalam", "Comic Sans MS", "Segoe Script", cursive;
+  --color-muted-ink: oklch(42% 0.022 55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}

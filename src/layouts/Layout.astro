@@ -1,4 +1,7 @@
 ---
+import "@fontsource/kalam/400.css";
+import "@fontsource/kalam/700.css";
+import "@fontsource-variable/figtree";
 import "../assets/app.css";
 import Header from "@/components/header/Header.astro"
 import Footer from "@/components/footer/Footer.astro"
@@ -7,7 +10,7 @@ const { title = "Skills" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" data-theme="skills">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,11 +19,13 @@ const { title = "Skills" } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-  <body class="flex min-h-screen  flex-col">
-      
+  <body class="flex min-h-screen flex-col bg-base-100 text-base-content font-sans">
+
+      <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:border focus:border-base-300 focus:bg-base-200 focus:px-4 focus:py-2 focus:text-base-content">Saltar al contenido</a>
+
       <Header />
 
-      <main class="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+      <main id="main" class="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6 sm:py-12">
             <slot />
       </main>
 
