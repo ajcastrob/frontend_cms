@@ -2,9 +2,22 @@
 const year = new Date().getFullYear();
 ---
 
-<footer class="footer footer-center border-t border-base-300 bg-base-200 px-4 py-10 text-base-content sm:py-12">
-  <aside class="flex flex-col items-center gap-2">
-    <p class="max-w-md text-sm text-muted-ink">Apuntes sobre skills de IA, probadas y anotadas.</p>
-    <p class="text-sm text-muted-ink">© {year} - jacastro </p>
-  </aside>
+<footer class="border-t border-base-300">
+  <div
+    class="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-8 sm:flex-row sm:items-end sm:justify-between sm:px-6 sm:py-10"
+  >
+    <aside class="flex flex-col gap-2">
+      <p class="font-display text-lg font-bold leading-none">Ashi Labs</p>
+      <p class="max-w-sm text-sm text-base-content/70">
+        Apuntes sobre skills de IA, probadas y anotadas.
+      </p>
+    </aside>
+    <div class="flex flex-col gap-3 sm:items-end">
+      <nav class="flex gap-4" aria-label="Pie de página">
+        <a href="/" class="link link-hover">Inicio</a>
+        <a href="/skills/" class="link link-hover">Skills</a>
+      </nav>
+      <p class="text-sm text-base-content/70">© {year} jacastro</p>
+    </div>
+  </div>
 </footer>

@@ -1,0 +1,11 @@
+---
+import Tags from "@/components/tags/Tags.astro";
+import { formatDate } from "@/lib/format.js";
+
+const { date, tags = [] } = Astro.props;
+---
+
+<div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-base-content/70">
+  {date && <time datetime={date}>{formatDate(date)}</time>}
+  <Tags tags={tags} />
+</div>

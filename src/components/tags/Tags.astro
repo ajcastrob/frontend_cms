@@ -1,0 +1,15 @@
+---
+const { tags = [] } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <ul class="flex flex-wrap gap-1.5">
+      {tags.map((tag) => (
+        <li>
+          <span class="badge badge-ghost badge-sm">{tag}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}

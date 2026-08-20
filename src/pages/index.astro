@@ -1,15 +1,13 @@
 ---
-import {getBlogPost} from "@/lib/wagtail.js"
-// import data from "@/data/posts.json"
-import Layout from "@/layouts/Layout.astro"
-import Hero from "@/components/hero/Hero.astro"
-import LayoutPost from "@/components/layout-post/LayoutPost.astro"
+import { getBlogPost } from "@/lib/wagtail.js";
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/hero/Hero.astro";
+import LayoutPost from "@/components/layout-post/LayoutPost.astro";
 
-// const posts = data.items
 const posts = await getBlogPost();
 ---
 
-<Layout title="Skills">
-	<Hero />
-	<LayoutPost posts={posts} />
+<Layout title="Ashi Labs">
+  <Hero />
+  <LayoutPost posts={posts} />
 </Layout>
