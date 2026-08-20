@@ -1,0 +1,52 @@
+---
+// LayoutPost: listado editorial de las últimas skills publicadas.
+// Presentacional: recibe el array de posts (mismo shape que Wagtail API v2)
+// y renderiza los 3 primeros como sections. Sin imágenes en fase mock.
+const { posts = [] } = Astro.props;
+
+const latest = posts.slice(0, 3);
+
+const formatDate = (iso) =>
+  new Date(iso).toLocaleDateString("es-ES", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+---
+
+{
+  latest.length > 0 && (
+    <section class="mt-10 sm:mt-14" aria-labelledby="ultimas-skills">
+      <h2
+        id="ultimas-skills"
+        class="font-sans text-2xl font-bold text-base-content sm:text-3xl"
+      >
+        Últimas skills
+      </h2>
+      <div class="mt-6 divide-y divide-base-300 sm:mt-8">
+        {latest.map((post) => (
+          <section class="py-8 first:pt-0 last:pb-0">
+            <h3 class="font-sans text-xl font-semibold leading-snug text-balance sm:text-2xl">
+              <a
+                href={`/skills/${post.meta.slug}`}
+                class="text-base-content transition-colors duration-150 ease-out hover:text-primary hover:underline hover:underline-offset-4"
+              >
+                {post.title}
+              </a>
+            </h3>
+            <p class="mt-2 max-w-prose text-base leading-relaxed text-muted-ink">
+              {post.intro}
+            </p>
+            <p class="mt-3 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-ink">
+              <time datetime={post.date}>{formatDate(post.date)}</time>
+              {post.tags.map((tag) => (
+                <span class="badge badge-sm">{tag}</span>
+              ))}
+            </p>
+          </section>
+        ))}
+      </div>
+    </section>
+  )
+}
