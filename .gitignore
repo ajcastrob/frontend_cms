@@ -26,3 +26,7 @@ pnpm-debug.log*
 # Design
 DESIGN.md
 PRODUCT.md
+
+# Agente
+.agents/
+skills-lock.json
